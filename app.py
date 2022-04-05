@@ -1,5 +1,6 @@
 import os
 os.system('python setup.py build develop')
+os.system('pip install --upgrade --no-cache-dir gdown')
 os.system('gdown -O output/mixtrain/ 1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs')
 
 import cv2
