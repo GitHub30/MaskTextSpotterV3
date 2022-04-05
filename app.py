@@ -1,5 +1,6 @@
 import os
 os.system('python setup.py build develop')
+os.system('gdown -O output/mixtrain/ 1XQsikiNY7ILgZvmvOeUf9oPDG4fTp0zs')
 
 import cv2
 import pandas as pd

@@ -1,3 +1,4 @@
 yacs
+gdown
 pyclipper
 pytorch-extension
