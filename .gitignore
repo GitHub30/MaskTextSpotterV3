@@ -37,3 +37,5 @@ dist/
 lexicons
 detection_zip
 cache_files
+
+.venv

@@ -9,7 +9,7 @@ from torch import nn
 from torch.nn import functional as F
 
 
-gpu_device = torch.device("cuda")
+gpu_device = torch.device("cpu")
 cpu_device = torch.device("cpu")
 
 
@@ -77,8 +77,8 @@ class SequencePredictor(nn.Module):
         x_onehot_size = int(self.cfg.SEQUENCE.RESIZE_WIDTH / 2)
         y_onehot_size = int(self.cfg.SEQUENCE.RESIZE_HEIGHT / 2)
         x_t, y_t = np.meshgrid(np.linspace(0, x_onehot_size - 1, x_onehot_size), np.linspace(0, y_onehot_size - 1, y_onehot_size))
-        x_t = torch.LongTensor(x_t, device=cpu_device).cuda()
-        y_t = torch.LongTensor(y_t, device=cpu_device).cuda()
+        x_t = torch.LongTensor(x_t, device=cpu_device)
+        y_t = torch.LongTensor(y_t, device=cpu_device)
         x_onehot_embedding = (
             self.x_onehot(x_t)
             .transpose(0, 2)
