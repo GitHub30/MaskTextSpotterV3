@@ -8,7 +8,7 @@ build/
 dist/
 
 # pytorch/python/numpy formats
-*.pth
+#*.pth
 *.pkl
 *.npy
 
@@ -28,9 +28,9 @@ dist/
 
 # project dirs
 /datasets
-/output
+#/output
 /vis
-*.jpg
+#*.jpg
 *.JPG
 *.JPEG
 # *.zip
